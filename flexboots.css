@@ -1,3 +1,14 @@
+/*
+ * flexboots.css
+ * by Nick Freeman <github.com/nikulis>
+ * 
+ * A system using flex-boxes to acheive a Bootstrap-like effect, with some
+ * advantages.
+ *
+ * Can also be used alongside bootstrap.
+ *
+**/
+
 .flexbox {
 	display: flex;
 	display: -webkit-flex;
@@ -12,34 +23,46 @@
 	align-items: center;
 	-webkit-align-items: center;
 }
+
 .flexitem {
+	/* Includes padding in calculation of width, so use padding, NOT margin, to
+	put spaces between flexitems */
 	box-sizing: border-box;
 }
-.flexitem.half {
-	flex: 50%;
-	-webkit-flex: 00 50%;
+
+/* > xs screens */
+@media screen and (min-width: 321px) {
+	.flexitem.half {
+		flex: 50%;
+		-webkit-flex: 50%;
+	}
+
+	.flexitem.one-third {
+		flex: 33.3%;
+		-webkit-flex: 33.3%;
+	}
+	.flexitem.two-thirds {
+		flex: 66.6%;
+		-webkit-flex: 66%;
+	}
+
+	.flexitem.golden-large {
+		flex: 62%;
+		-webkit-flex: 62%;
+	}
+
+	.flexitem.golden-small {
+		flex: 38%;
+		-webkit-flex: 38%;
+	}
 }
-.flexitem.one-third {
-	flex: 33.3%;
-	-webkit-flex: 00 33.3%;
-}
-.flexitem.two-third {
-	flex: 66.6%;
-	-webkit-flex: 00 66%;
-}
-.flexitem.golden-large {
-	flex: 62%;
-	-webkit-flex: 00 62%;
-}
-.flexitem.golden-small {
-	flex: 38%;
-	-webkit-flex: 00 38%;
-}
+
+/* xs screens */
 @media screen and (max-width: 320px) {
 	/* All will display on individual line */
 	.flexitem.one-third, .flexitem.two-third, .flexitem.golden-small, .flexitem.golden-large, .flexitme .half {
 		flex: 100%;
-		-webkit-flex: 00 100%;
+		-webkit-flex: 100%;
 		padding: 0 !important; /* Override column padding */
 	}
 }
