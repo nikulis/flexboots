@@ -4,7 +4,7 @@ Flexboots is a lightweight css library for easily making layouts. It can achieve
 
 ##What can it do?
 
-Check out the [demo](/demo.html)
+Check out the [demo](http://nikulis.github.io/flexboots/demo)
 
 
 ##Usage
