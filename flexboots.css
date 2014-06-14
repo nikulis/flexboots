@@ -13,6 +13,8 @@
 	display: flex;
 	display: -webkit-flex;
 
+	position: relative;
+
 	flex-flow: row wrap;
 	-webkit-flex-direction: row;
 	-webkit-flex-wrap: wrap;
@@ -28,41 +30,63 @@
 	/* Includes padding in calculation of width, so use padding, NOT margin, to
 	put spaces between flexitems */
 	box-sizing: border-box;
+
+	text-align: center;
+}
+
+.flexitem.fill {
+	flex-grow: 1;
+	-webkit-flex-grow: 1;
 }
 
 /* > xs screens */
 @media screen and (min-width: 321px) {
 	.flexitem.half {
-		flex: 50%;
-		-webkit-flex: 50%;
+		flex-basis: 50%;
+		-webkit-flex-basis: 50%;
 	}
 
 	.flexitem.one-third {
-		flex: 33.3%;
-		-webkit-flex: 33.3%;
+		flex-basis: 33.3333%;
+		-webkit-flex-basis: 33.3333%;
 	}
 	.flexitem.two-thirds {
-		flex: 66.6%;
-		-webkit-flex: 66%;
+		flex-basis: 66.6666%;
+		-webkit-flex-basis: 0 0 66.6666%;
 	}
 
-	.flexitem.golden-large {
-		flex: 62%;
-		-webkit-flex: 62%;
+	.flexitem.one-quarter {
+		flex-basis: 25%;
+		-webkit-flex-basis: 25%;
 	}
 
-	.flexitem.golden-small {
-		flex: 38%;
-		-webkit-flex: 38%;
+	.flexitem.two-quarters {
+		flex-basis: 50%;
+		-webkit-flex-basis: 50%;
+	}
+
+	.flexitem.three-quarters {
+		flex-basis: 75%;
+		-webkit-flex-basis: 75%;
+	}
+
+	.flexitem.golden-lg {
+		flex-basis: 61.8034%;
+		-webkit-flex-basis: 61.8034%;
+	}
+
+	.flexitem.golden-sm {
+		flex-basis: 38.1966%;
+		-webkit-flex-basis: 38.1966%;
 	}
 }
 
 /* xs screens */
 @media screen and (max-width: 320px) {
 	/* All will display on individual line */
-	.flexitem.one-third, .flexitem.two-thirds, .flexitem.golden-small, .flexitem.golden-large, .flexitme .half {
-		flex: 100%;
-		-webkit-flex: 100%;
+	.flexitem {
+		flex-basis: 100%;
+		-webkit-flex-basis: 100%;
 		padding: 0 !important; /* Override column padding */
 	}
 }
