@@ -1,0 +1,92 @@
+/*
+ * flexboots.css
+ * by Nick Freeman <github.com/nikulis/flexboots>
+ * 
+ * A system using flex-boxes to acheive a Bootstrap-like effect, with some
+ * advantages.
+ *
+ * Can also be used alongside bootstrap.
+ *
+**/
+
+.flexbox {
+	display: flex;
+	display: -webkit-flex;
+
+	position: relative;
+
+	flex-flow: row wrap;
+	-webkit-flex-direction: row;
+	-webkit-flex-wrap: wrap;
+
+	justify-content: space-around;
+	-webkit-justify-content: space-around;
+
+	align-items: center;
+	-webkit-align-items: center;
+}
+
+.flexitem {
+	/* Includes padding in calculation of width, so use padding, NOT margin, to
+	put spaces between flexitems */
+	box-sizing: border-box;
+
+	text-align: center;
+}
+
+.flexitem.fill {
+	flex-grow: 1;
+	-webkit-flex-grow: 1;
+}
+
+/* > xs screens */
+@media screen and (min-width: 321px) {
+	.flexitem.half {
+		flex-basis: 50%;
+		-webkit-flex-basis: 50%;
+	}
+
+	.flexitem.one-third {
+		flex-basis: 33.3333%;
+		-webkit-flex-basis: 33.3333%;
+	}
+	.flexitem.two-thirds {
+		flex-basis: 66.6666%;
+		-webkit-flex-basis: 0 0 66.6666%;
+	}
+
+	.flexitem.one-quarter {
+		flex-basis: 25%;
+		-webkit-flex-basis: 25%;
+	}
+
+	.flexitem.two-quarters {
+		flex-basis: 50%;
+		-webkit-flex-basis: 50%;
+	}
+
+	.flexitem.three-quarters {
+		flex-basis: 75%;
+		-webkit-flex-basis: 75%;
+	}
+
+	.flexitem.golden-lg {
+		flex-basis: 61.8034%;
+		-webkit-flex-basis: 61.8034%;
+	}
+
+	.flexitem.golden-sm {
+		flex-basis: 38.1966%;
+		-webkit-flex-basis: 38.1966%;
+	}
+}
+
+/* xs screens */
+@media screen and (max-width: 320px) {
+	/* All will display on individual line */
+	.flexitem {
+		flex-basis: 100%;
+		-webkit-flex-basis: 100%;
+		padding: 0 !important; /* Override column padding */
+	}
+}
