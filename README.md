@@ -1,4 +1,4 @@
-#flexboots
+#flexboots :boot::boot:
 
 Flexboots is a lightweight css library for easily making layouts. It can achieve similar effects for which one might normally use [Bootstrap](http://getbootstrap.com), but has some more flexibility, among other advantages. Also works well in combination with Bootstrap.
 
