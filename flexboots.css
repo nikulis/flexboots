@@ -1,6 +1,6 @@
 /*
  * flexboots.css
- * by Nick Freeman <github.com/nikulis>
+ * by Nick Freeman <github.com/nikulis/flexboots>
  * 
  * A system using flex-boxes to acheive a Bootstrap-like effect, with some
  * advantages.
@@ -60,7 +60,7 @@
 /* xs screens */
 @media screen and (max-width: 320px) {
 	/* All will display on individual line */
-	.flexitem.one-third, .flexitem.two-third, .flexitem.golden-small, .flexitem.golden-large, .flexitme .half {
+	.flexitem.one-third, .flexitem.two-thirds, .flexitem.golden-small, .flexitem.golden-large, .flexitme .half {
 		flex: 100%;
 		-webkit-flex: 100%;
 		padding: 0 !important; /* Override column padding */
