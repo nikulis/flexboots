@@ -11,7 +11,7 @@ flexboots provides a simple wrapper to easily set up and work with flexboxes.
 
 > Many designers will find the flexbox model easier to use. Child elements in a flexbox can be laid out in any direction and can have flexible dimensions to adapt to the display space. Positioning child elements is thus much easier, and complex layouts can be achieved more simply and with cleaner code, as the display order of the elements is independent of their order in the source code.
 
-Read the full documentation on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes).
+Read the full CSS3 flexbox documentation on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes).
 
 
 ##Usage
@@ -19,4 +19,16 @@ Read the full documentation on the [Mozilla Developer Network](https://developer
 Simply download flexboots.css and include it in your web project, like
 ```html
 <link href="<path>/flexboots.css" rel="stylesheet" type="text/css" />
+```
+
+Making your first flexbox is as easy as
+```html
+<div class="flexbox">
+  <div class="flexitem">
+    some stuff
+  </div>
+  <div class="flexitem">
+    some more stuff
+  </div>
+</div>
 ```
