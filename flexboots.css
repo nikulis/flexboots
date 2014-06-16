@@ -1,11 +1,18 @@
 /*
  * flexboots.css
- * by Nick Freeman <github.com/nikulis/flexboots>
  * 
- * A system using flex-boxes to acheive a Bootstrap-like effect, with some
+ * (c) 2014 by Nick Freeman <github.com/nikulis>
+ * see LICENSE.txt
+ * 
+ * A system using CSS flex-boxes to acheive a Bootstrap-like effect, with some
  * advantages.
  *
- * Can also be used alongside bootstrap.
+ * Can also be used alongside Bootstrap.
+ *
+ * Read more documentation on the project's repo at
+ * <github.com/nikulis/flexboots>
+ * or on the project page at
+ * <nikulis.github.io/flexboots>
  *
 **/
 
@@ -40,7 +47,7 @@
 }
 
 /* > xs screens */
-@media screen and (min-width: 321px) {
+@media screen and (min-width: 481px) {
 	.flexitem.half {
 		flex-basis: 50%;
 		-webkit-flex-basis: 50%;
@@ -82,7 +89,7 @@
 }
 
 /* xs screens */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
 	/* All will display on individual line */
 	.flexitem {
 		flex-basis: 100%;
