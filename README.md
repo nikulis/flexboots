@@ -11,13 +11,15 @@ flexboots provides a simple wrapper to easily set up and work with css flexboxes
 
 > Many designers will find the flexbox model easier to use. Child elements in a flexbox can be laid out in any direction and can have flexible dimensions to adapt to the display space. Positioning child elements is thus much easier, and complex layouts can be achieved more simply and with cleaner code, as the display order of the elements is independent of their order in the source code.
 
-Read the full CSS3 flexbox documentation on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes).
+Read the full CSS3 flexbox documentation (with examples) on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes).
+
+Also read CSS-Trick's wonderful resource [A Complete Guide to Flexbox](http://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 
 ## Why is it better than Bootstrap?
 
 **It's not *better* than Bootstrap**; flexboots (and css flexbox in general) just offers a different approach to layouts that may be advantageous, depending on the type of design you are trying to achieve.
 
-Consider the following use case: you have an image with a corresponding block of text. You want to lay them out side-by-side on desktop reflowing to each be full-width on mobile. You do the following using Bootstrap's `col-`'s:
+Consider the following use case: you have an image with a corresponding block of text. You want to lay them out side-by-side on desktop reflowing to each be full-width on mobile. You do the following using Bootstrap's `col-*`'s:
 
 ```html
 <div class="row">
