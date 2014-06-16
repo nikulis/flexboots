@@ -4,6 +4,11 @@
 	<link href="flexboots.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<style>
+		body {
+			background-image: url('http://subtlepatterns.com/patterns/hexabump.png');
+			background-repeat: repeat;
+			background-color: black;
+		}
 		.outline.blue {
 			border: 1px solid blue;
 			background-color: lightblue;
@@ -21,13 +26,23 @@
 		h4 {
 			margin-top: 1em;
 		}
+
+		pre {
+			display: inline;
+			padding: 0;
+			font-size: inherit;
+			font-family: monospace, sans-serif;
+		}
 	</style>
 </head>
 <body>
-	<div class="container" style="margin-bottom:4em;">
+	<div class="container" style="margin-bottom:2em;padding-bottom:2em;background-color:white;">
 		<h1>flexboots <small>demo</small></h1>
 
 		<a href="index.html"><button class="btn btn-default btn-sm">home</button></a> <a href="http://github.com/nikulis/flexboots"><button class="btn btn-sm btn-default btn-info">view project on GitHub</button></a>
+
+		<p class="lead" style="margin: 2em 0 0 0;">*all examples below include extra outlines and padding for display purposes</p>
+		<p class="lead">*tip: resize the browser window to see how flexboxes behave at different widths</p>
 
 		<h3>flexbox with two plain flexitems:</h3>
 		<div class="flexbox outline black">
@@ -41,6 +56,14 @@
 		</div>
 
 		<h3>flexitems with standard widths</h3>
+
+		<h4>Full-width</h4>
+		<div class="flexbox outline black">
+			<span style="position:absolute;top:0;left:0;">.flexbox</span>
+			<div class="flexitem full outline blue">
+			.flexitem.full
+			</div>
+		</div>		
 
 		<h4>Halfs</h4>
 		<div class="flexbox outline black">
@@ -99,6 +122,17 @@
 			</div>
 		</div>
 
+		<h3>flexitems with custom widths</h3>
+		<div class="flexbox outline black">
+			<span style="position:absolute;top:0;left:0;">.flexbox</span>
+			<div class="flexitem outline blue" style="width: 400px;">.flexitem style="width:400px;"</div>
+		</div>
+		<div class="flexbox outline black">
+			<span style="position:absolute;top:0;left:0;">.flexbox</span>
+			<div class="flexitem outline blue" style="width: 400px;">.flexitem style="width:400px;"</div>
+			<div class="flexitem one-quarter outline blue">.flexitem.one-quarter</div>
+		</div>
+
 		<h3>Adding more than 100% will wrap to a new line</h3>
 		<div class="flexbox outline black">
 			<span style="position:absolute;top:0;left:0;">.flexbox</span>
@@ -107,12 +141,71 @@
 			<div class="flexitem two-thirds outline blue">.flexitem.two-thirds</div>
 		</div>
 
-		<h3>flexitems with .fill expand to fill up remaining space in a line</h3>
+		<h3>flexitems with <pre>.fill</pre> expand to fill up remaining space in a line</h3>
+		<div class="flexbox outline black">
+			<span style="position:absolute;top:0;left:0;">.flexbox</span>
+			<div class="flexitem outline blue">
+			.flexitem
+			</div>
+			<div class="flexitem fill outline blue">
+			.flexitem.fill
+			</div>
+		</div>
 		<div class="flexbox outline black">
 			<span style="position:absolute;top:0;left:0;">.flexbox</span>
 			<div class="flexitem half fill outline blue">.flexitem.half.fill</div>
 			<div class="flexitem one-quarter outline blue">.flexitem.one-quarter</div>
 			<div class="flexitem two-thirds outline blue">.flexitem.two-thirds</div>
+		</div>
+
+		<h3>Different ways to align flexitems</h3>
+
+		<h4><pre>.flexbox</pre> [default]</h4>
+		<div class="flexbox outline black">
+			<span style="position:absolute;top:0;left:0;">.flexbox</span>
+			<div class="flexitem outline blue">.flexitem</div>
+			<div class="flexitem outline blue">.flexitem</div>
+			<div class="flexitem outline blue">.flexitem</div>
+		</div>
+
+		<h4><pre>.flexbox-tight-center</pre></h4>
+		<div class="flexbox flexbox-tight-center outline black">
+			<span style="position:absolute;top:0;left:0;">.flexbox.flexbox-tight-center</span>
+			<div class="flexitem outline blue">.flexitem</div>
+			<div class="flexitem outline blue">.flexitem</div>
+			<div class="flexitem outline blue">.flexitem</div>
+		</div>
+
+		<h4><pre>.flexbox-wide-center</pre></h4>
+		<div class="flexbox flexbox-wide-center outline black">
+			<span style="position:absolute;top:0;left:0;">.flexbox.flexbox-wide-center</span>
+			<div class="flexitem outline blue">.flexitem</div>
+			<div class="flexitem outline blue">.flexitem</div>
+			<div class="flexitem outline blue">.flexitem</div>
+		</div>
+
+		<h4><pre>.flexbox-align-left</pre></h4>
+		<div class="flexbox flexbox-align-left outline black">
+			<span style="position:absolute;top:0;left:0;">.flexbox.flexbox-align-left</span>
+			<div class="flexitem outline blue">.flexitem</div>
+			<div class="flexitem outline blue">.flexitem</div>
+			<div class="flexitem outline blue">.flexitem</div>
+		</div>	
+
+		<h4><pre>.flexbox-align-right</pre></h4>
+		<div class="flexbox flexbox-align-right outline black">
+			<span style="position:absolute;top:0;left:0;">.flexbox.flexbox-align-right</span>
+			<div class="flexitem outline blue">.flexitem</div>
+			<div class="flexitem outline blue">.flexitem</div>
+			<div class="flexitem outline blue">.flexitem</div>
+		</div>	
+
+		<h3>flexboxes can be further customized through styling</h3>
+		<div class="flexbox outline black" style="width:50%;float:right;">
+			<span style="position:absolute;top:0;left:0;">.flexbox style="width: 50%; float: right;"</span>
+			<div class="flexitem outline blue">
+				.flexitem
+			</div>
 		</div>
 	</div>
 </body>

@@ -1,11 +1,18 @@
 /*
  * flexboots.css
- * by Nick Freeman <github.com/nikulis/flexboots>
  * 
- * A system using flex-boxes to acheive a Bootstrap-like effect, with some
+ * (c) 2014 by Nick Freeman <github.com/nikulis>
+ * see LICENSE.txt
+ * 
+ * A system using CSS flex-boxes to acheive a Bootstrap-like effect, with some
  * advantages.
  *
- * Can also be used alongside bootstrap.
+ * Can also be used alongside Bootstrap.
+ *
+ * Read more documentation on the project's repo at
+ * <github.com/nikulis/flexboots>
+ * or on the project page at
+ * <nikulis.github.io/flexboots>
  *
 **/
 
@@ -26,9 +33,40 @@
 	-webkit-align-items: center;
 }
 
+.flexbox.flexbox-align-top {
+	align-items: top;
+	-webkit-align-items: top;
+}
+
+.flexbox.flexbox-align-bottom {
+	align-items: bottom;
+	-webkit-align-items: bottom;
+}
+
+.flexbox.flexbox-tight-center {
+	justify-content: center;
+	-webkit-justify-content: center;
+}
+
+.flexbox.flexbox-wide-center {
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+}
+
+.flexbox.flexbox-align-left {
+	justify-content: flex-start;
+	-webkit-justify-content: flex-start;
+}
+
+.flexbox.flexbox-align-right {
+	justify-content: flex-end;
+	-webkit-justify-content: flex-end;
+}
+
 .flexitem {
-	/* Includes padding in calculation of width, so use padding, NOT margin, to
-	put spaces between flexitems */
+	/* Includes padding and border in calculation of width,
+	 * so use padding - NOT margin - to put extra desired
+	 * spacing between flexitems */
 	box-sizing: border-box;
 
 	text-align: center;
@@ -40,7 +78,13 @@
 }
 
 /* > xs screens */
-@media screen and (min-width: 321px) {
+@media screen and (min-width: 481px) {
+	
+	.flexitem.full {
+		flex-basis: 100%;
+		-webkit-flex-basis: 100%;
+	}
+
 	.flexitem.half {
 		flex-basis: 50%;
 		-webkit-flex-basis: 50%;
@@ -52,17 +96,12 @@
 	}
 	.flexitem.two-thirds {
 		flex-basis: 66.6666%;
-		-webkit-flex-basis: 0 0 66.6666%;
+		-webkit-flex-basis: 66.6666%;
 	}
 
 	.flexitem.one-quarter {
 		flex-basis: 25%;
 		-webkit-flex-basis: 25%;
-	}
-
-	.flexitem.two-quarters {
-		flex-basis: 50%;
-		-webkit-flex-basis: 50%;
 	}
 
 	.flexitem.three-quarters {
@@ -81,8 +120,8 @@
 	}
 }
 
-/* xs screens */
-@media screen and (max-width: 320px) {
+/* xs/mobile screens */
+@media screen and (max-width: 480px) {
 	/* All will display on individual line */
 	.flexitem {
 		flex-basis: 100%;
