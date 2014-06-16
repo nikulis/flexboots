@@ -33,9 +33,40 @@
 	-webkit-align-items: center;
 }
 
+.flexbox.flexbox-align-top {
+	align-items: top;
+	-webkit-align-items: top;
+}
+
+.flexbox.flexbox-align-bottom {
+	align-items: bottom;
+	-webkit-align-items: bottom;
+}
+
+.flexbox.flexbox-tight-center {
+	justify-content: center;
+	-webkit-justify-content: center;
+}
+
+.flexbox.flexbox-wide-center {
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+}
+
+.flexbox.flexbox-align-left {
+	justify-content: flex-start;
+	-webkit-justify-content: flex-start;
+}
+
+.flexbox.flexbox-align-right {
+	justify-content: flex-end;
+	-webkit-justify-content: flex-end;
+}
+
 .flexitem {
-	/* Includes padding in calculation of width, so use padding, NOT margin, to
-	put spaces between flexitems */
+	/* Includes padding and border in calculation of width,
+	 * so use padding - NOT margin - to put extra desired
+	 * spacing between flexitems */
 	box-sizing: border-box;
 
 	text-align: center;
@@ -48,6 +79,12 @@
 
 /* > xs screens */
 @media screen and (min-width: 481px) {
+	
+	.flexitem.full {
+		flex-basis: 100%;
+		-webkit-flex-basis: 100%;
+	}
+
 	.flexitem.half {
 		flex-basis: 50%;
 		-webkit-flex-basis: 50%;
@@ -67,11 +104,6 @@
 		-webkit-flex-basis: 25%;
 	}
 
-	.flexitem.two-quarters {
-		flex-basis: 50%;
-		-webkit-flex-basis: 50%;
-	}
-
 	.flexitem.three-quarters {
 		flex-basis: 75%;
 		-webkit-flex-basis: 75%;
@@ -88,7 +120,7 @@
 	}
 }
 
-/* xs screens */
+/* xs/mobile screens */
 @media screen and (max-width: 480px) {
 	/* All will display on individual line */
 	.flexitem {
