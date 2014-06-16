@@ -63,3 +63,21 @@ Making your first flexbox is as easy as
   </div>
 </div>
 ```
+
+##Browser Support
+
+Some browsers implement old, unofficial, and/or vendor-prefixed versions of the flexbox model in CSS3. flexboots should work as advertised on the following:
+
+Desktop:
+- Chrome 21+
+- Firefox 28+
+- IE 10+
+- Opera 12.10+
+- Safari 6.1+
+
+Mobile:
+- Firefox Mobile 28+
+- Opera Mobile 15+
+- Safari 7+
+
+As you extend and further customize your designs and layouts using more advanced flexbox syntax, keep in mind that some browsers may not play kindly. For more info on browser compatibility, see [MDN](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes#Browser_compatibility) and [CSS-Tricks](http://css-tricks.com/snippets/css/a-guide-to-flexbox/).
